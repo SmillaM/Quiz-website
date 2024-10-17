@@ -7,14 +7,36 @@
     <title>Quiz app</title>
 </head>
 <body>
-    <form>
-        <label for="first-name">Förnamn</label>
-        <input type="text" id="first-name" name="first-name" required>
-        <label for="surname">Efternamn</label>
-        <input type="text" id="surname" name="surname" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    </form>
+    <div class="app">
+
+        <h1>Hur väl känner du mig?</h1>
+
+        <form onsubmit="return validateUserInput()">
+
+            <h2>Fyll i dina uppgifter här:</h2>
+
+            <div class="form-group">
+                <label for="first-name" class="input-label">Förnamn</label>
+                <span id="first-name-error" class="error"></span>
+                <input type="text" id="first-name" class="input-field" name="first-name" required>
+            </div>
+ 
+            <div class="form-group">
+                <label for="surname" class="input-label">Efternamn</label>
+                <span id="surname-error" class="error"></span>
+                <input type="text" id="surname" class="input-field" name="surname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="input-label">Email</label>
+                <span id="email-error" class="error"></span>
+                <input type="email" id="email" class="input-field" name="email" required>
+            </div>
+            
+            <button type="submit">Skicka</button>
+    
+        </form>
+    </div>
     <script src="smilla.js"></script>
 </body>
 </html>
