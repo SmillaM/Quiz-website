@@ -10,6 +10,10 @@ function validateUserInput () {
     const surnameError = document.getElementById("surname-error");
     const emailError = document.getElementById("email-error");
 
+    firstNameError.textContent = "";
+    surnameError.textContent = "";
+    emailError.textContent = "";
+
     let isValid = true;
 
     if (!nameRegex.test(firstName)) {

@@ -7,42 +7,58 @@
 
 body {
     background-image: linear-gradient(to bottom, rgb(88, 152, 155), darkblue);
+    height: 100vh;    
     display: flex;
-    justify-content: center;      
-    height: 1500px;            
+    justify-content: center;
 }
 
 .app {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 50%;
-    height: auto;
-    background-color: aliceblue;
+    margin-top: 15%;
+    width: 70%;
+    height: 300px;
+    background-color: rgb(179, 211, 239);
     border-radius: 20px;
+    padding: 60px;
 }
 
 h1 {
     text-align: center;
-    margin-top: 40px;
 }
 
 h2 {
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 form {
     display: flex;
-    flex-direction: column;
-    padding: 30px 40px;
-}
-
-.input-label {
-    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-end
 }
 
 .input-field {
-    margin-bottom: 30px;
+    border: none;
+    margin-top: 5px;
+    width: 110%;
+    border-radius: 8px;
     height: 30px;
+}
+
+#btn-verify-info {
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btn-verify-info:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
 }
 
 .error {
