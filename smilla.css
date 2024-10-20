@@ -34,21 +34,42 @@ h2 {
 }
 
 form {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 0.5fr;
+    gap: 20px;
+}
+
+.form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end
+    flex-direction: column; 
+}
+
+.input-label {
+    font-size: 1em;
+    margin-bottom: 5px;
 }
 
 .input-field {
     border: none;
-    margin-top: 5px;
-    padding-left: 10px;
-    width: 110%;
+    padding: 8px;
+    width: 100%;
     border-radius: 8px;
     height: 30px;
 }
 
+.error {
+    color: purple;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.button-area {
+   position: relative;
+   top: 19px;
+}
+
 #btn-verify-info {
+    margin-left: 20px;
     background-color: darkblue;
     display: flex;
     align-items: center;
@@ -58,13 +79,9 @@ form {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 #btn-verify-info:hover {
     transform: scale(1.1);
-    transition: 0.3s ease;
-}
-
-.error {
-    color: purple;
 }

@@ -4,7 +4,7 @@ function validateUserInput () {
     const email = document.getElementById("email").value;
 
     const nameRegex = /^[A-Za-z]+$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     const firstNameError = document.getElementById("first-name-error");
     const surnameError = document.getElementById("surname-error");
@@ -17,12 +17,12 @@ function validateUserInput () {
     let isValid = true;
 
     if (!nameRegex.test(firstName)) {
-        firstNameError.textContent = "Förnamn ska endast innehålla bokstäver";
+        firstNameError.textContent = "Förnamn får endast innehålla bokstäver";
         isValid = false;
     }
 
     if (!nameRegex.test(surname)) {
-        surnameError.textContent = "Efternamn ska endast innehålla bokstäver";
+        surnameError.textContent = "Efternamn får endast innehålla bokstäver";
         isValid = false;
     }
 
