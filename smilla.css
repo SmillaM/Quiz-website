@@ -22,10 +22,13 @@ body {
 }
 
 h1 {
+    font-size: 2rem;
     text-align: center;
 }
 
 h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
     margin-top: 30px;
     margin-bottom: 20px;
 }
@@ -39,6 +42,7 @@ form {
 .input-field {
     border: none;
     margin-top: 5px;
+    padding-left: 10px;
     width: 110%;
     border-radius: 8px;
     height: 30px;
