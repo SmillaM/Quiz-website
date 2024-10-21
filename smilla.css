@@ -12,15 +12,6 @@ body {
     justify-content: center;
 }
 
-.app {
-    margin-top: 15%;
-    width: 70%;
-    height: 300px;
-    background-color: rgb(179, 211, 239);
-    border-radius: 20px;
-    padding: 60px;
-}
-
 h1 {
     font-size: 2rem;
     text-align: center;
@@ -31,17 +22,6 @@ h2 {
     font-weight: 500;
     margin-top: 30px;
     margin-bottom: 20px;
-}
-
-form {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr 0.5fr;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column; 
 }
 
 .input-label {
@@ -57,6 +37,26 @@ form {
     height: 30px;
 }
 
+.app {
+    margin-top: 15%;
+    width: 70%;
+    height: auto;
+    background-color: rgb(179, 211, 239);
+    border-radius: 20px;
+    padding: 60px;
+}
+
+#intro-form {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.intro-group {
+    display: flex;
+    flex-direction: column; 
+}
+
 .error {
     color: purple;
     font-size: 0.9em;
@@ -64,8 +64,8 @@ form {
 }
 
 .button-area {
-   position: relative;
-   top: 19px;
+    display: flex;
+    justify-content: center;
 }
 
 #btn-verify-info {
@@ -75,7 +75,7 @@ form {
     align-items: center;
     height: 30px;
     color: white;
-    padding: 20px 30px;
+    padding: 20px 50px;
     border: none;
     border-radius: 8px;
     cursor: pointer;

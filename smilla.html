@@ -12,32 +12,114 @@
         <h1>Hur väl känner du Smilla?</h1>
         <h2>Fyll i dina uppgifter här:</h2>
 
-        <form onsubmit="return validateUserInput()">
+        <form onsubmit="return validateUserInput()" id="intro-form">
 
-            <div class="form-group">
+            <div class="intro-group">
                 <label for="first-name" class="input-label">Förnamn</label>
                 <input type="text" id="first-name" class="input-field" name="first-name" required>
                 <span id="first-name-error" class="error"></span>
             </div>
  
-            <div class="form-group">
+            <div class="intro-group">
                 <label for="surname" class="input-label">Efternamn</label>
                 <input type="text" id="surname" class="input-field" name="surname" required>
                 <span id="surname-error" class="error"></span>
             </div>
             
-            <div class="form-group">
+            <div class="intro-group">
                 <label for="email" class="input-label">Email</label>
                 <input type="email" id="email" class="input-field" name="email" required>
                 <span id="email-error" class="error"></span>
             </div>
-            
-            <div class="button-area">
-                <button type="submit" id="btn-verify-info">Skicka</button>
-            </div>
-    
         </form>
+       
+        <h2>Quizfrågor:</h2>
+
+        <div class="quiz-question">
+            <label>Var har Smilla INTE bott?</label>
+
+            <input type="radio" id="home-ludvika" name="homes" value="ludvika">
+            <label for="home-ludvika">Ludvika</label>
+
+            <input type="radio" id="home-bromölla" name="homes" value="bromölla">
+            <label for="home-bromölla">Bromölla</label>
+
+            <input type="radio" id="home-åkersberga" name="homes" value="åkersberga">
+            <label for="home-åkersberga">Åkersberga</label>
+
+            <input type="radio" id="home-västerhaninge" name="homes" value="västerhaninge">
+            <label for="home-västerhaninge">Västerhaninge</label>
+
+            <span id="homes-error" class="error"></span>
+        </div>
+
+        <div class="quiz-question">
+            <label>Vad heter Smilla i mellannamn? Flera svar möjliga</label>
+
+            <input type="checkbox" id="name-laurora" name="names" value="laurora">
+            <label for="name-laurora">Láurora</label>
+
+            <input type="checkbox" id="name-astrid" name="names" value="astrid">
+            <label for="name-astrid">Astrid</label>
+
+            <input type="checkbox" id="name-rakel" name="names" value="rakel">
+            <label for="name-rakel">Rakel</label>
+
+            <input type="checkbox" id="name-älva" name="names" value="älva">
+            <label for="name-rakel">Älva</label>
+
+            <span id="names-error" class="error"></span>
+        </div>
+
+        <div class="quiz-question">
+            <label>Vad tycker Smilla om vädligt mycket som hennes sambo tycker är vidrigt?</label>
+
+            <input type="radio" id="snack-oliver" name="snacks" value="oliver">
+            <label for="snack-oliver">Oliver</label>
+
+            <input type="radio" id="snack-falukorv" name="snacks" value="falukorv">
+            <label for="snack-falukorv">Falukorv</label>
+
+            <input type="radio" id="snack-apelsinkrokant" name="snacks" value="apelsinkrokant">
+            <label for="snack-apelsinkrokant">Apelsinkrokant</label>
+
+            <input type="radio" id="snack-frysta-bullar" name="snacks" value="frysta-bullar">
+            <label for="snack-frysta-bullar">Frysta bullar</label>
+
+            <span id="snacks-error" class="error"></span>
+        </div>
+
+        <div class="quiz-question">
+            <label>Vad är Smillas tidigare yrken? Flera svar möjliga</label>
+
+            <input type="checkbox" id="jobs-gymnastiktränare" name="jobs" value="gymnastiktränare">
+            <label for="jobs-gymnastiktränare">Gymnastiktränare</label>
+
+            <input type="checkbox" id="jobs-telefonförsäljare" name="jobs" value="telefonförsäljare">
+            <label for="jobs-telefonförsäljare">Telefonförsäljare</label>
+
+            <input type="checkbox" id="jobs-loppis" name="jobs" value="loppis">
+            <label for="jobs-loppis">Loppisvärd</label>
+
+            <input type="checkbox" id="jobs-köksplanerare" name="jobs" value="köksplanerare">
+            <label for="jobs-köksplanerare">Köksplanerare</label>
+
+            <span id="jobs-error" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="resa">Vilket land besöker Smilla först under sin 3 månaders resa i sydostasien 2025?</label><br>
+            <input type="text" id="resa" class="input-field" name="resa" required>
+            
+            <span id="open-question-error" class="error"></span>
+        </div>
+       
+        <div class="button-area">
+            <button type="submit" id="btn-verify-info">Skicka</button>
+        </div>
+
     </div>
+
     <script src="smilla.js"></script>
 </body>
 </html>
