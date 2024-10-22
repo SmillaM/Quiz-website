@@ -2,6 +2,7 @@
     --blue-color: darkblue;
     --green-color: rgb(88, 152, 155);
     --app-color: rgb(179, 211, 239);
+    --detail-color: rgb(119, 29, 151);
 }
 
 * {
@@ -36,6 +37,10 @@ h3 {
     font-size: 1rem;
     margin-top: 30px;
     margin-bottom: 8px;
+}
+
+.required {
+    color: var(--detail-color);
 }
 
 .input-label {
@@ -82,7 +87,7 @@ input[type="text"], input[type="radio"], input[type="checkbox"], button {
 }
 
 .error {
-    color: purple;
+    color: var(--detail-color);
     font-size: 0.8rem;
     margin-top: 10px;
 }
