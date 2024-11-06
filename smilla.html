@@ -79,24 +79,18 @@
         
         <div class="quiz-question">
             <h3>Vad tycker Smilla om väldigt mycket som hennes sambo tycker är vidrigt?<span class="required">*</span></h3>
-        
-            <ol>
-                <li><input type="radio" id="snack-oliver" name="snacks" value="oliver">
-                <label for="snack-oliver">Oliver</label></li>
-        
-                <li><input type="radio" id="snack-falukorv" name="snacks" value="falukorv">
-                <label for="snack-falukorv">Falukorv</label></li>
-        
-                <li><input type="radio" id="snack-apelsinkrokant" name="snacks" value="apelsinkrokant">
-                <label for="snack-apelsinkrokant">Apelsinkrokant</label></li>
-        
-                <li><input type="radio" id="snack-frysta-bullar" name="snacks" value="frysta-bullar">
-                <label for="snack-frysta-bullar">Frysta bullar</label></li>
-            </ol>
-        
+            
+            <select id="snacks" name="snacks" required>
+                <option value="" disabled selected>Välj ett alternativ</option>
+                <option value="oliver">Oliver</option>
+                <option value="falukorv">Falukorv</option>
+                <option value="apelsinkrokant">Apelsinkrokant</option>
+                <option value="frysta-bullar">Frysta bullar</option>
+            </select>
+            
             <span id="snacks-error" class="error"></span>
         </div>
-        
+
         <div class="quiz-question">
             <h3>Vad är Smillas tidigare yrken? Flera svar möjliga</h3>
         
@@ -121,10 +115,12 @@
         </div>
        
         <div class="button-area">
-            <button type="submit" id="btn-verify-info">Skicka</button>
+            <button type="button" id="submit-button">Skicka</button>
         </div>
 
         </form>
+
+        <div id="success-message"></div>
 
     </div>
 

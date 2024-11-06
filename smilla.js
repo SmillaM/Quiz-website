@@ -3,7 +3,7 @@ function validateUserInput() {
     const surname = document.getElementById("surname").value;
     const email = document.getElementById("email").value;
     const homes = document.querySelector('input[name="homes"]:checked');
-    const snacks = document.querySelector('input[name="snacks"]:checked');
+    const snacks = document.getElementById("snacks").value;
 
     const nameRegex = /^[A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -42,7 +42,7 @@ function validateUserInput() {
         isValid = false;
     }
 
-    if (!snacks) {
+    if (snacks === "") {
         snacksError.textContent = "Välj vad Smilla tycker om väldigt mycket";
         isValid = false;
     }
@@ -52,7 +52,13 @@ function validateUserInput() {
 
 document.getElementById("submit-button").addEventListener("click", function(event) {
     event.preventDefault();
+    const successMessage = document.getElementById("success-message");
+    successMessage.textContent = "";
+
     if (validateUserInput()) {
-        alert("Informationen har angetts korrekt!");
+        successMessage.textContent = "Tack för att du gjorde quizet!";
     }
 });
+
+
+

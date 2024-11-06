@@ -9,6 +9,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 25px;
 }
@@ -19,8 +20,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
-/* General styling*/
 
 h1 {
     font-size: 2rem;
@@ -49,7 +48,7 @@ h3 {
 }
 
 .input-field {
-    border: none;
+    background-color: white;
     padding: 8px;
     width: 100%;
     border-radius: 8px;
@@ -60,11 +59,19 @@ ol {
     list-style: none;
 }
 
-input[type="text"], input[type="radio"], input[type="checkbox"], button {
+input[type="text"], input[type="radio"], input[type="checkbox"], button, select {
     cursor: pointer;
 }
 
-/* Quiz app */
+select {
+    font-size: 0.8rem; 
+    padding: 8px;
+    width: 30%;
+    height: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: none;
+}
 
 .app {
     margin: 5% 0;
@@ -87,13 +94,14 @@ input[type="text"], input[type="radio"], input[type="checkbox"], button {
 }
 
 .error {
+    display: block;
     color: var(--detail-color);
     font-size: 0.8rem;
     margin-top: 10px;
 }
 
 .final-question {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .button-area {
@@ -102,9 +110,9 @@ input[type="text"], input[type="radio"], input[type="checkbox"], button {
     margin-top: 30px;
 }
 
-#btn-verify-info {
-    margin-left: 20px;
+#submit-button {
     background-color: var(--blue-color);
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
     height: 30px;
@@ -115,6 +123,12 @@ input[type="text"], input[type="radio"], input[type="checkbox"], button {
     transition: transform 0.3s ease;
 }
 
-#btn-verify-info:hover {
+#submit-button:hover {
     transform: scale(1.1);
+}
+
+#success-message {
+    color: var(--detail-color);
+    text-align: center;
+    margin-top: 20px;
 }
