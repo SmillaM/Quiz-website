@@ -1,6 +1,0 @@
-1. To ensure that the user can only enter letters in the first name and surname fields, and the correct format for email, I declared a Regex variable. I found a template for this online. 
-To show error messages I added <span> under each input field to make them appear later with JavaScript.
-I wanted the input fields for first name, surname and email to be lined up horisontally, but the error messages to be displayed under each field. This was a bit tricky since the input fields required flex-direction: row and error flex-direction: column. 
-I realized that my email regex wasn't fully adequate since I managed to sumbit invalid email adresses. So I looked up a more specifik one and replaced my existing with it. 
-When I added the questions I relazed that my button only would submit the introdruction part, which is where you write your contact information. So I had to change the structure, how they were nested, to make the button submit all information. This affected the styling in CSS so I had to come up with another solution to achieve the design. 
-I tried to add some margins to the last h3 element in the document and tried h3:last-of-type, but for some reason all h3's got selected. Instead a gave the last h3 the class "final-question" and selected it in CSS, which worked out. 
