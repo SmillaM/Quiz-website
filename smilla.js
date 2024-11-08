@@ -47,6 +47,11 @@ function validateUserInput() {
         isValid = false;
     }
 
+    if (resa === "") {
+        snacksError.textContent = "Välj vad Smilla tycker om väldigt mycket";
+        isValid = false;
+    }
+
     return isValid;
 }
 
