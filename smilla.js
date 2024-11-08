@@ -4,6 +4,7 @@ function validateUserInput() {
     const email = document.getElementById("email").value;
     const homes = document.querySelector('input[name="homes"]:checked');
     const snacks = document.getElementById("snacks").value;
+    const resa = document.getElementById("resa").value;
 
     const nameRegex = /^[A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -13,12 +14,14 @@ function validateUserInput() {
     const emailError = document.getElementById("email-error");
     const homesError = document.getElementById("homes-error");
     const snacksError = document.getElementById("snacks-error");
+    const resaError = document.getElementById("resa-error");
 
     firstNameError.textContent = "";
     surnameError.textContent = "";
     emailError.textContent = "";
     homesError.textContent = "";
     snacksError.textContent = "";
+    resaError.textContent = "";
 
     let isValid = true;
 
@@ -48,7 +51,7 @@ function validateUserInput() {
     }
 
     if (resa === "") {
-        snacksError.textContent = "Välj vad Smilla tycker om väldigt mycket";
+        resaError.textContent = "Skriv var Smilla ska resa";
         isValid = false;
     }
 
